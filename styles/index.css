@@ -1,0 +1,410 @@
+body {
+  font-family: Spectral, times new roman;
+  margin: 0;
+  padding: 0;
+}
+
+.header-img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-background {
+  width: 100%;
+  height: 33vh;
+  background-position-y: 25%;
+  position: relative;
+  object-fit: cover;
+  filter: brightness(.5)
+}
+
+.header-logo {
+  position: absolute;
+  bottom: 10px;
+}
+
+.header-logo img {
+  width: 500px;
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+.header-logo img:hover {
+  filter:sepia(.9);
+}
+
+.youtube-logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: filter .3s;
+}
+
+.youtube-logo:hover {
+  filter: opacity(.7);
+}
+
+nav {
+  position: relative;
+}
+
+/* So for the navigation container we need a media query */
+.navigation-container {
+  display: flex;
+  padding: 10px 5px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15vw;
+  background-color: rgba(179, 169, 136, .7);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.nav-title a, .nav-title-2 a, .nav-title-drop-down a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  transition: color .3s;
+}
+
+.nav-title a:hover, .nav-title-2 a:hover, .nav-title-drop-down:hover a {
+  color: white;
+}
+
+.nav-title-2 {
+  position: relative;
+}
+
+.learn-drop-down-menu {
+  position: absolute;
+  background-color: rgba(179, 169, 136, .7);
+  z-index: 1;
+  text-align: center;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s ease;
+}
+
+.nav-title-2:hover .learn-drop-down-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .navigation-container {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    gap: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .automotive-services-section {
+    font-size: 18px;
+      width: 300px;
+  }
+
+  .what-we-do p {
+    font-size: 50px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .learn-drop-down-menu {
+    width: 100%;
+    top: 39px;
+  }
+}
+
+@media (min-width: 801px) {
+  .what-we-do p {
+    font-size: 60px;
+  }
+
+  .automotive-services-section {
+    font-size: 24px;
+    width: 700px;
+  }
+
+  .footer {
+    flex-direction: row;
+    height: 250px;
+    gap: 3vw;
+  }
+
+  .learn-drop-down-menu {
+    left: -50px;
+    top: 44px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .nav-title-drop-down {
+    border-bottom: 1px solid black;
+    margin: 0px 10px;
+  }
+}
+
+.call-to-action {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 700px;
+}
+
+.image-call-to-action {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  filter: brightness(.6);
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: 5px solid rgba(72, 96, 76, .7);
+}
+
+.what-we-do p {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 200px;
+  text-align: center;
+}
+
+.what-we-do button {
+  position: absolute;
+  background-color: rgba(72, 96, 76);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 15px;
+  bottom: 200px;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  transition: background-color .5s, border .5s;
+  margin-bottom: 0;
+}
+
+.what-we-do button:hover {
+  padding: 14px;
+  background-color: rgba(72, 96, 76, .7);
+  border: 1px solid white;
+}
+
+.homepage-services {
+  position: relative;
+  width: 100vw;
+  height: 800px;
+  background-color: rgba(179, 169, 136, .7);
+  margin: 0;
+  padding: 0;
+  border-bottom: 5px solid rgba(72, 96, 76, .7);
+}
+
+.automotive-services-section {
+  color: black;
+  padding: 10px;
+  margin-top: 0;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  gap: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+.automotive-services-section p {
+  margin: 0;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.automotive-services-list {
+  margin: 0;
+}
+
+.services-button {
+  background-color: rgba(72, 96, 76);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 15px;
+  color: white;
+  transition: background-color .3s, border .5s;
+  cursor: pointer;
+}
+
+.services-button:hover {
+  background-color: rgba(72, 96, 76, .7);
+  padding: 14px;
+  border: 1px solid white;
+}
+
+.portfolio {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  background-color: black;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+.portfolio-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  animation: fade 12s ease-in-out infinite alternate;
+}
+
+.portfolio-images:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.portfolio-images:nth-of-type(2) {
+  animation-delay: 6s;
+}
+
+.footer {
+  display: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid black;
+  display: flex;
+  padding: 15px;
+  background: rgba(179, 169, 136, .7);
+  margin-top: 0;
+  position: relative;
+}
+
+.company-data-container {
+  display: flex;
+  flex-direction: column;
+  flex: .5;
+}
+
+.footer-name {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+.location {
+  margin-bottom: 5px;
+}
+
+.location-text {
+  text-decoration: none;
+  color: black;
+  transition: color .5s;
+  font-size: 18px;
+}
+
+.location-text:hover {
+  color: white;
+}
+
+.hours {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.phone {
+  margin-bottom: 5px;
+}
+
+.email a, .phone a {
+  text-decoration: none;
+  color: black;
+  transition: color .5s;
+  font-size: 18px;
+}
+
+.email a:hover, .phone a:hover {
+  color: white;
+}
+
+.site-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-layout a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.site-page-title p {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.site-page-container {
+  margin-bottom: 1px;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  flex: .5;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+.footer-logo:hover {
+  filter: sepia(.9);
+}
+
+.terms-conditions {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  font-size: 16px;
+  z-index: 0;
+}

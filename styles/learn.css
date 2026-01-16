@@ -1,0 +1,289 @@
+body {
+  font-family: Spectral, times new roman;
+  margin: 0;
+  padding: 0;
+}
+
+.header-img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-background {
+  width: 100%;
+  height: 33vh;
+  background-position-y: 25%;
+  position: relative;
+  object-fit: cover;
+  filter: brightness(.5)
+}
+
+.header-logo {
+  position: absolute;
+  bottom: 10px;
+}
+
+.header-logo img {
+  width: 500px;
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+.header-logo img:hover {
+  filter:sepia(.9);
+}
+
+.youtube-logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: filter .3s;
+}
+
+.youtube-logo:hover {
+  filter: opacity(.7);
+}
+
+nav {
+  position: relative;
+}
+
+/* So for the navigation container we need a media query */
+.navigation-container {
+  display: flex;
+  padding: 10px 5px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15vw;
+  background-color: rgba(179, 169, 136, .7);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.nav-title a, .nav-title-2 a, .nav-title-drop-down a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  transition: color .3s;
+}
+
+.nav-title a:hover, .nav-title-2 a:hover, .nav-title-drop-down:hover a {
+  color: white;
+}
+
+.nav-title-2 {
+  position: relative;
+}
+
+.learn-drop-down-menu {
+  position: absolute;
+  background-color: rgba(179, 169, 136, .7);
+  z-index: 1;
+  text-align: center;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s ease;
+}
+
+.nav-title-2:hover .learn-drop-down-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@media (max-width: 800px) {
+  .navigation-container {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    gap: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    gap: none;
+  }
+
+  .learn-drop-down-menu {
+    width: 100%;
+    top: 39px;
+  }
+}
+
+@media (min-width: 801px) {
+  .footer {
+    height: 250px;
+    gap: 3vw;
+  }
+
+  .learn-drop-down-menu {
+    left: -50px;
+    top: 44px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .nav-title-drop-down {
+    border-bottom: 1px solid black;
+    margin: 0px 10px;
+  }
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.page-description p {
+  font-size: 22px;
+  padding: 10px;
+  margin: 0;
+}
+
+.navigation-menu p {
+  padding: 10px;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navigation-button {
+  background-color: rgba(179, 169, 136, .7);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color .3s;
+}
+
+.navigation-button:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+button {
+  font-family: spectral;
+}
+
+.footer {
+  display: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid black;
+  display: flex;
+  padding: 15px;
+  background: rgba(179, 169, 136, .7);
+  margin-top: 0;
+  position: relative;
+}
+
+.company-data-container {
+  display: flex;
+  flex-direction: column;
+  flex: .5;
+}
+
+.footer-name {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+.location {
+  margin-bottom: 5px;
+}
+
+.location-text {
+  text-decoration: none;
+  color: black;
+  transition: color .5s;
+  font-size: 18px;
+}
+
+.location-text:hover {
+  color: white;
+}
+
+.hours {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.phone {
+  margin-bottom: 5px;
+}
+
+.email a, .phone a {
+  text-decoration: none;
+  color: black;
+  transition: color .5s;
+  font-size: 18px;
+}
+
+.email a:hover, .phone a:hover {
+  color: white;
+}
+
+.site-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-layout a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.site-page-title p {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.site-page-container {
+  margin-bottom: 1px;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  flex: .5;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+.footer-logo:hover {
+  filter: sepia(.9);
+}
+
+.terms-conditions {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  font-size: 16px;
+  z-index: 0;
+}
