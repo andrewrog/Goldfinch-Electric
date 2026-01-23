@@ -26,11 +26,9 @@ body {
 
 .header-logo {
   position: absolute;
-  bottom: 10px;
 }
 
 .header-logo img {
-  width: 500px;
   cursor: pointer;
   transition: filter .3s;
 }
@@ -101,6 +99,14 @@ body {
     padding-bottom: 5px;
     padding-top: 5px;
   }
+
+  .header-logo img {
+    width: 300px;
+  }
+
+  .header-logo {
+    bottom: 30px;
+  }
   
   .footer {
     flex-direction: column;
@@ -117,6 +123,14 @@ body {
 }
 
 @media (min-width: 801px) {
+  .header-logo img {
+    width: 500px;
+  }
+
+  .header-logo {
+    bottom: 10px;
+  }
+  
   .footer {
     gap: 3vw;
     height: 250px;
