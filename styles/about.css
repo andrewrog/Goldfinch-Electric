@@ -25,7 +25,6 @@ body {
 
 .header-logo {
   position: absolute;
-  bottom: 10px;
 }
 
 .header-logo img {
@@ -107,6 +106,7 @@ nav {
 
   .header-logo img {
     width: 300px;
+    bottom: 30px;
   }
 
   .person-container {
@@ -145,6 +145,7 @@ nav {
 @media (min-width: 801px) {
   .header-logo img {
     width: 500px;
+    bottom: 10px;
   }
 
   .person-img {
