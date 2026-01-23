@@ -25,11 +25,9 @@ body {
 
 .header-logo {
   position: absolute;
-  bottom: 10px;
 }
 
 .header-logo img {
-  width: 500px;
   cursor: pointer;
   transition: filter .3s;
 }
@@ -105,6 +103,14 @@ nav {
     padding-top: 5px;
   }
 
+  .header-logo img {
+    width: 300px;
+  }
+
+  .header-logo {
+    bottom: 30px;
+  }
+
   .footer {
     flex-direction: column;
     height: 400px;
@@ -120,6 +126,14 @@ nav {
 }
 
 @media (min-width: 801px) {
+  .header-logo img {
+    width: 500px;
+  }
+
+  .header-logo {
+    bottom: 10px;
+  }
+  
   .footer {
     height: 250px;
     gap: 3vw;
