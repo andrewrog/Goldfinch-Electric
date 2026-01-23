@@ -29,7 +29,6 @@ body {
 }
 
 .header-logo img {
-  width: 500px;
   cursor: pointer;
   transition: filter .3s;
 }
@@ -106,6 +105,10 @@ nav {
     padding-top: 5px;
   }
 
+  .header-logo img {
+    width: 300px;
+  }
+
   .person-container {
     flex-direction: column;
     height: auto;
@@ -140,6 +143,9 @@ nav {
 }
 
 @media (min-width: 801px) {
+  .header-logo img {
+    width: 500px;
+  }
 
   .person-img {
     width: 40vw;
