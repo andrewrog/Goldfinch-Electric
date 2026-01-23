@@ -25,11 +25,9 @@ body {
 
 .header-logo {
   position: absolute;
-  bottom: 10px;
 }
 
 .header-logo img {
-  width: 500px;
   cursor: pointer;
   transition: filter .3s;
 }
@@ -106,6 +104,14 @@ nav {
     padding-top: 5px;
   }
 
+  .header-logo img {
+    width: 300px;
+  }
+
+  .header-logo {
+    bottom: 30px;
+  }
+
   .automotive-services-section {
     font-size: 18px;
       width: 300px;
@@ -130,6 +136,14 @@ nav {
 }
 
 @media (min-width: 801px) {
+  .header-logo img {
+    width: 300px;
+  }
+
+  .header-logo {
+    bottom: 10px;
+  }
+  
   .what-we-do p {
     font-size: 60px;
   }
